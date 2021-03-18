@@ -70,7 +70,7 @@ export default {
     document.addEventListener(
       "wheel",
       (e) => {
-        document.getElementById("scroll_container").scrollLeft += (e.deltaY * 0.2);
+        document.getElementById("scroll_container").scrollLeft += (e.deltaY);
       },
       { passive: false }
     );

@@ -30,6 +30,7 @@ export default {
   methods: {
     openAnswer() {
       this.isOpen = !this.isOpen;
+      console.log(this.isOpen)
     },
   },
 };
