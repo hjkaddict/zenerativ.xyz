@@ -4,10 +4,12 @@
       <div class="interviewInfo">
         This interview has been conducted between SOL and Hyungjoong Kim for a
         showcase at Louis Poulsen Seongsoo.
-        <span class="seeClip" @click="openMovie()" 
-        @mouseover="hover = true"
-        @mouseleave="hover = false"
-        :class="{hover : hover}"
+        <span
+          class="seeClip"
+          @click="openMovie()"
+          @mouseover="hover = true"
+          @mouseleave="hover = false"
+          :class="{ hover: hover }"
           >See full interview as
           <span>a movie <font-awesome-icon icon="arrow-right"/></span
         ></span>
@@ -112,6 +114,7 @@ section {
   width: 100%;
   background-color: black;
   color: white;
+  overflow: hidden;
 }
 
 .interviewInfo {
@@ -130,8 +133,13 @@ section {
   cursor: pointer;
 }
 
-
 .hover {
   color: #ff008a;
+}
+
+@media only screen and (max-width: 768px) {
+  .interviewInfo {
+    font-size: 2em;
+  }
 }
 </style>

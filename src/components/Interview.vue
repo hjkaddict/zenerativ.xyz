@@ -52,11 +52,8 @@ section {
   color: white;
   border-bottom: 2px solid white;
   transition: 2s ease-in-out;
-  /* transition: 1.0s ease-in-out */
 }
 .answer p {
-  /* padding: 10px; */
-  /* padding-left: 50px; */
   margin-left: 30px;
   padding: 20px;
   border-left: 2px solid white;
@@ -68,5 +65,12 @@ section {
 
 .answerClick {
   color: #ff008a;
+}
+
+@media only screen and (max-width: 768px) {
+  section {
+    font-size: 1em;
+    line-height: 1.1em;
+  }
 }
 </style>

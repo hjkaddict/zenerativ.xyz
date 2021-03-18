@@ -1,5 +1,5 @@
 <template>
-  <section id="scroll_container" v-dragscroll.x>
+  <section id="scroll_container" v-dragscroll>
     <drawing
       class="drawing"
       v-for="image in images"

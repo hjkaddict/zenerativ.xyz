@@ -1,12 +1,12 @@
 <template>
   <section>
-    <nav :class="{ navbarExtended: extended }">
+    <nav :class="{ navbarExtended: extended }" v-scroll-lock="extended">
       <div class="extendedSide">
         <navbar-item
           v-for="item in navbaritems"
           :key="item"
           :title="item"
-          v-scroll-to="'#'+item+'C'"
+          v-scroll-to="'#' + item + 'C'"
         ></navbar-item>
       </div>
 
@@ -19,7 +19,8 @@
             <span></span>
           </div>
         </div>
-        <div class="text">
+
+        <div class="text" v-if="!isMobile()">
           <p>zenerative drawings</p>
         </div>
       </div>
@@ -37,14 +38,7 @@ export default {
   data() {
     return {
       extended: false,
-      navbaritems: [
-        "home",
-        "drawings",
-        "code",
-        "videos",
-        "interview",
-        "about",
-      ],
+      navbaritems: ["home", "drawings", "code", "videos", "interview", "about"],
     };
   },
   computed: {},
@@ -52,6 +46,19 @@ export default {
     menuExtended() {
       this.extended = !this.extended;
       this.$emit("menuExtended", this.extended);
+    },
+    isMobile() {
+      if (
+        /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
+          navigator.userAgent
+
+          //use as v-if="!isMobile()
+        )
+      ) {
+        return true;
+      } else {
+        return false;
+      }
     },
   },
 };
@@ -65,7 +72,7 @@ export default {
 nav {
   color: white;
   transform: translateX(-220px);
-  background-color: black;
+  background: transparent;
   /* opacity: 0.5; */
   width: 300px;
   height: 100vh;
@@ -79,6 +86,7 @@ nav {
   height: 100vh;
   display: flex;
   flex-direction: column;
+  background: black;
 }
 
 .notExtendedSide {
@@ -91,6 +99,7 @@ nav {
   width: 80px;
   height: 80px;
   display: flex;
+  background: black;
 }
 .text {
   font-family: "Montserrat Subrayada", sans-serif;
@@ -98,8 +107,9 @@ nav {
   transform: rotate(180deg);
   font-size: 3em;
   display: flex;
+  height: calc(100vh - 80px);
   align-items: center;
-  align-self: end;
+  background: black;
 }
 
 #nav-icon3 {
@@ -176,5 +186,11 @@ nav {
   top: 18px;
   width: 0%;
   left: 50%;
+}
+
+@media only screen and (max-width: 768px) {
+  .text {
+    background: transparent;
+  }
 }
 </style>
