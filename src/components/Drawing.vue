@@ -14,14 +14,21 @@ export default {
 
 <style scoped>
 .container {
-  position: relative;
   height: 100%;
-  /* width: calc(100% * 3 / 4); */
-  
 }
 
 .container img {
-  height: 100vh;
-  width: calc( 100vh * 2 / 3)
+  height: 100%;
+  width: calc(100vh * 2 / 3);
+}
+
+@media only screen and (max-width: 768px) {
+  .container {
+    height: 50vh;
+  }
+  .container img {
+    height: 100%;
+    width: calc(50vh * 2 / 3);
+  }
 }
 </style>

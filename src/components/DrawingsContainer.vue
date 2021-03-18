@@ -84,13 +84,16 @@ export default {
   white-space: nowrap;
   overflow: scroll;
   cursor: grab;
-  
-  /* overflow-x: hidden; */
   background-color: black;
+  display: flex;
+  align-items: center;
 }
 
 .drawing {
   display: inline-block;
-  height: 100%;
+}
+
+@media only screen and (max-width: 768px) {
+  
 }
 </style>
