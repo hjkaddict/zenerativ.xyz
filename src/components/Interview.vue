@@ -30,7 +30,7 @@ export default {
   methods: {
     openAnswer() {
       this.isOpen = !this.isOpen;
-      console.log(this.isOpen)
+      console.log(this.isOpen);
     },
   },
 };
@@ -41,8 +41,12 @@ section {
   font-family: "Noto Sans", sans-serif;
   font-size: 2em;
   line-height: 1.2em;
+  /* border: 1px solid blue; */
 }
 .question {
+  position: relative;
+  left: 80px;
+  width: calc(100% - 80px);
   border-bottom: 2px solid white;
   cursor: pointer;
   z-index: 3;
@@ -51,6 +55,9 @@ section {
   padding: 5px;
 }
 .answer {
+  position: relative;
+  left: 80px;
+  width: calc(100% - 80px);
   color: white;
   border-bottom: 2px solid white;
   transition: 2s ease-in-out;
@@ -73,6 +80,12 @@ section {
   section {
     font-size: 1em;
     line-height: 1.1em;
+  }
+
+  .answer, .question {
+    position: relative;
+    left: 0px;
+    width: 100%;
   }
 }
 </style>

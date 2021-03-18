@@ -115,6 +115,8 @@ section {
   background-color: black;
   color: white;
   overflow: hidden;
+
+  position: relative;
 }
 
 .interviewInfo {
@@ -122,10 +124,9 @@ section {
   letter-spacing: -2px;
   font-size: 4em;
   border-bottom: 2px solid white;
-}
-
-.interviewInfo img {
-  width: 50px;
+  position: relative;
+  left: 80px;
+  width: calc(100% - 80px);
 }
 
 .seeClip {
@@ -140,6 +141,8 @@ section {
 @media only screen and (max-width: 768px) {
   .interviewInfo {
     font-size: 2em;
+    left: 0px;
+    width: 100%;
   }
 }
 </style>
