@@ -86,8 +86,8 @@
         // osc().out(o0);
 
         src(o0)
-          .modulateHue(src(o0).scale(1.01), 2)
-          .layer(osc(Math.PI * 8, 0.1, 2).mask(shape(4, 0.3, 0.0001)))
+          .modulateHue(src(o0).scale(1.05), 2)
+          .layer(osc(Math.PI * 8, 2, 2).mask(shape(3, 0.35, 0.0001)))
           .out();
 
         // console.log(sketch);
