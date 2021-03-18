@@ -66,6 +66,46 @@ export default {
           id: "9",
           url: "drawings10.jpg",
         },
+        {
+          id: "10",
+          url: "drawings11.jpg",
+        },
+        {
+          id: "11",
+          url: "drawings12.jpg",
+        },
+        {
+          id: "12",
+          url: "drawings13.jpg",
+        },
+        {
+          id: "13",
+          url: "drawings14.jpg",
+        },
+        {
+          id: "14",
+          url: "drawings15.jpg",
+        },
+        {
+          id: "15",
+          url: "drawings16.jpg",
+        },
+        {
+          id: "16",
+          url: "drawings17.jpg",
+        },
+        {
+          id: "17",
+          url: "drawings18.jpg",
+        },
+        {
+          id: "18",
+          url: "drawings19.jpg",
+        },
+        {
+          id: "19",
+          url: "drawings20.jpg",
+        },
       ],
     };
   },
@@ -74,7 +114,7 @@ export default {
     document.addEventListener(
       "wheel",
       (e) => {
-        document.getElementById("scroll_container").scrollLeft += e.deltaY;
+        document.getElementById("scroll_container").scrollLeft += (e.deltaY*2);
       },
       { passive: false }
     );

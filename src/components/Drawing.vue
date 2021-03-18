@@ -20,6 +20,8 @@ export default {
 .container img {
   height: 100%;
   width: calc(100vh * 2 / 3);
+
+    border: 2px solid black;
 }
 
 @media only screen and (max-width: 768px) {
