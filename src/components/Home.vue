@@ -83,6 +83,7 @@ export default {
   z-index: 1;
   left: 0px;
   top: 0;
+  
 }
 
 @media only screen and (max-width: 1024px) {

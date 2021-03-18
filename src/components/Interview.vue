@@ -45,6 +45,7 @@ section {
 .question {
   border-bottom: 2px solid white;
   cursor: pointer;
+  z-index: 3;
 }
 .question p {
   padding: 5px;

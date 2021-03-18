@@ -65,20 +65,29 @@ export default {
 </script>
 
 <style scoped>
+
+section {
+
+  /* border: 5px solid red; */
+}
 .navbarExtended {
   transform: translateX(0px);
 }
 
 nav {
   color: white;
+  position: absolute;
+  /* top: 0; */
+  left: 0px;
   transform: translateX(-220px);
   background: transparent;
   /* opacity: 0.5; */
-  width: 300px;
-  height: 100vh;
+  /* width: 300px; */
+  /* height: 100vh; */
   display: flex;
   flex-direction: row;
   transition: 0.3s ease-in-out;
+  z-index: 1;
 }
 
 .extendedSide {
@@ -190,7 +199,7 @@ nav {
 
 @media only screen and (max-width: 768px) {
   .text {
-    background: transparent;
+    display: none;
   }
 }
 </style>

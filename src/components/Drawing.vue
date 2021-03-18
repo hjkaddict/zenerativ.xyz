@@ -24,11 +24,12 @@ export default {
 
 @media only screen and (max-width: 768px) {
   .container {
-    height: 50vh;
+    height: 70vh;
   }
   .container img {
     height: 100%;
-    width: calc(50vh * 2 / 3);
+    width: calc(70vh * 2 / 3);
+    border: 1px solid black;
   }
 }
 </style>

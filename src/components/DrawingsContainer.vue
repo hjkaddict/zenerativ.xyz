@@ -1,11 +1,15 @@
 <template>
-  <section id="scroll_container" v-dragscroll>
-    <drawing
-      class="drawing"
-      v-for="image in images"
-      :key="image.id"
-      :imgUrl="image.url"
-    ></drawing>
+  <section>
+    <div class="wrapper">
+      <div id="scroll_container" v-dragscroll>
+        <drawing
+          class="drawing"
+          v-for="image in images"
+          :key="image.id"
+          :imgUrl="image.url"
+        ></drawing>
+      </div>
+    </div>
   </section>
 </template>
 
@@ -70,7 +74,7 @@ export default {
     document.addEventListener(
       "wheel",
       (e) => {
-        document.getElementById("scroll_container").scrollLeft += (e.deltaY);
+        document.getElementById("scroll_container").scrollLeft += e.deltaY;
       },
       { passive: false }
     );
@@ -79,12 +83,20 @@ export default {
 </script>
 
 <style scoped>
-#scroll_container {
+.wrapper {
   height: 100vh;
-  white-space: nowrap;
+  background: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#scroll_container {
+  height: 100%;
+  /* white-space: nowrap; */
   overflow: scroll;
   cursor: grab;
-  background-color: black;
+  /* border: 1px solid red; */
   display: flex;
   align-items: center;
 }
@@ -94,6 +106,8 @@ export default {
 }
 
 @media only screen and (max-width: 768px) {
-  
+  #scroll_container {
+    height: 70%;
+  }
 }
 </style>
