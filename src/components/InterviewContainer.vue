@@ -11,8 +11,8 @@
           @mouseleave="hover = false"
           :class="{ hover: hover }"
           >See full interview as
-          <span>a movie <font-awesome-icon icon="arrow-right"/></span
-        ></span>
+          <span>a movie <font-awesome-icon icon="arrow-right"/></span></span><br>
+          See full interview as a text <font-awesome-icon icon="arrow-down"/>
       </div>
 
       <interview
@@ -121,12 +121,16 @@ section {
 
 .interviewInfo {
   font-family: "Montserrat Subrayada", sans-serif;
-  letter-spacing: -2px;
-  font-size: 4em;
-  border-bottom: 2px solid white;
+  letter-spacing: -3px;
+  font-size: 4.5em;
+  /* border-bottom: 1px solid white; */
   position: relative;
   left: 80px;
   width: calc(100% - 80px);
+  /* padding: 0.5em 0; */
+  line-height: 1.3em;
+  padding: 4em 0 0.5em 0;
+  /* line */
 }
 
 .seeClip {

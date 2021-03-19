@@ -5,7 +5,7 @@ import VueYouTubeEmbed from "vue-youtube-embed";
 
 import { library } from "@fortawesome/fontawesome-svg-core";
 import VScrollLock from "v-scroll-lock";
-import {faArrowRight } from "@fortawesome/free-solid-svg-icons";
+import { faArrowRight, faArrowDown } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
 
 Vue.use(VueYouTubeEmbed);
@@ -23,7 +23,7 @@ Vue.use(VueScrollTo, {
   y: true,
 });
 
-library.add(faArrowRight);
+library.add(faArrowRight, faArrowDown);
 
 Vue.component("font-awesome-icon", FontAwesomeIcon);
 Vue.use(VScrollLock);
