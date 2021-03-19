@@ -3,7 +3,7 @@
     <div>
       <div class="interviewInfo">
         This interview has been conducted between SOL and Hyungjoong Kim for a
-        showcase at Louis Poulsen Seongsoo.
+        showcase at Louis Poulsen Seongsu.
         <span
           class="seeClip"
           @click="openMovie()"
