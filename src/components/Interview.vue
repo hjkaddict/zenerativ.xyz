@@ -58,6 +58,7 @@ section {
   cursor: pointer;
   z-index: 3;
   padding: 0.6em 0;
+  
 }
 .question p {
   padding: 5px;
@@ -88,7 +89,6 @@ section {
 @media only screen and (max-width: 768px) {
   section {
     font-size: 1em;
-    line-height: 1.1em;
   }
 
   .answer,
