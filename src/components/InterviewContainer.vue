@@ -2,8 +2,15 @@
   <section>
     <div>
       <div class="interviewInfo">
-        This interview has been conducted between SOL and Hyungjoong Kim for a
-        showcase at Louis Poulsen Seongsu.
+        This interview has been conducted between SOL and Hyungjoong Kim for
+        <span
+          class="seeClip"
+          @click="openShowcase()"
+          @mouseover="clipHover = true"
+          @mouseleave="clipHover = false"
+          :class="{ hover: clipHover }"
+          >a showcase </span
+        >at Louis Poulsen Seongsu.
         <span
           class="seeClip"
           @click="openMovie()"
@@ -11,8 +18,9 @@
           @mouseleave="hover = false"
           :class="{ hover: hover }"
           >See full interview as
-          <span>a movie <font-awesome-icon icon="arrow-right"/></span></span><br>
-          See full interview as a text <font-awesome-icon icon="arrow-down"/>
+          <span>a movie <font-awesome-icon icon="arrow-right"/></span></span
+        ><br />
+        See full interview as a text <font-awesome-icon icon="arrow-down" />
       </div>
 
       <interview
@@ -36,6 +44,12 @@ export default {
   methods: {
     openMovie() {
       window.open("https://youtu.be/tElsJrmBVxw", "_blank");
+    },
+    openShowcase() {
+      window.open(
+        "https://solmagazine.net/en/pages/hyungjoong-kim-at-louis-poulsen-seongsu",
+        "_blank"
+      );
     },
   },
 
@@ -103,6 +117,7 @@ export default {
             "그 질문에 대한 해답을 찾기 위한 목적으로 작품을 활동을 하고 있지는 않았던 것 같다. 하지만 그러한 생각이 내가 창작활동을 시작하는데에 있어서 가장 큰 동기였음에는 분명하다는 생각이 든다. 어떻게든 계속해서 작업을 해오면서 스스로 느끼는 점은, 이 근원에 대한 해답이 어딘가 있을 것이라고 생각하지 않게 되는 것이다. 오히려 내 자신을 한발자국 떨어져서 보게되고, 그렇게 봄으로써 그 해답은 한가지가 아니라 그 안에 무한한 가능성을 지니고 있는 것으로 생각이 든다.",
         },
       ],
+      clipHover: false,
       hover: false,
     };
   },
@@ -135,6 +150,11 @@ section {
 
 .seeClip {
   color: #9e00ff;
+  cursor: pointer;
+}
+
+.seeShowcase {
+  color: red;
   cursor: pointer;
 }
 

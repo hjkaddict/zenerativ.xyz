@@ -119,6 +119,7 @@ nav {
   height: calc(100vh - 80px);
   align-items: center;
   background: black;
+  padding: 0.5em 0;
 }
 
 #nav-icon3 {
