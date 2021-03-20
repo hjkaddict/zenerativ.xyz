@@ -43,7 +43,7 @@ export default {
   },
   methods: {
     openMovie() {
-      window.open("https://youtu.be/tElsJrmBVxw", "_blank");
+      window.open("https://youtu.be/p63mZUTVtIA", "_blank");
     },
     openShowcase() {
       window.open(
