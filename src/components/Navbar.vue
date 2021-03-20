@@ -66,10 +66,6 @@ export default {
 
 <style scoped>
 
-section {
-
-  /* border: 5px solid red; */
-}
 .navbarExtended {
   transform: translateX(0px);
 }
